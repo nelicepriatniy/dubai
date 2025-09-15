@@ -1,5 +1,7 @@
 @import url("https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Ubuntu:ital,wght@0,300;0,400;0,500;0,700;1,300;1,400;1,500;1,700&display=swap");
 * {
+  scroll-padding-top: 100px;
+  scroll-behavior: smooth;
   margin: 0;
   padding: 0;
   box-sizing: border-box;
@@ -442,6 +444,47 @@ header .header-home svg {
   height: 100%;
   -o-object-fit: cover;
      object-fit: cover;
+  z-index: 1;
+}
+.steps .item .heaidng {
+  font-family: "Ubuntu", sans-serif;
+  font-weight: 700;
+  font-size: 24px;
+  text-align: center;
+  color: #fff;
+  position: relative;
+  z-index: 2;
+  margin-bottom: 20px;
+}
+.steps .item .heaidng span {
+  color: #e75f00;
+}
+.steps .item .heaidng::after {
+  content: "";
+  display: block;
+  width: 155px;
+  height: 1px;
+  background: #e75f00;
+  margin-top: 20px;
+}
+.steps .item .text {
+  font-family: "Ubuntu", sans-serif;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 137%;
+  text-align: center;
+  color: #fff;
+  position: relative;
+  z-index: 2;
+}
+.steps .item svg {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  left: calc(100% + 50px);
+}
+.steps .item:nth-child(3n) svg {
+  display: none;
 }
 .steps .block-bg {
   position: absolute;
@@ -468,12 +511,12 @@ header .header-home svg {
   font-weight: 400;
   font-size: 64px;
   color: #fff;
-  display: flex;
   gap: 30px;
-  flex-direction: column;
 }
 .final .heading::after {
   content: "";
+  margin-top: 20px;
+  margin-bottom: 20px;
   display: block;
   width: 400px;
   height: 1px;
@@ -548,4 +591,235 @@ footer .arrow {
 }
 footer .arrow svg {
   width: 20px;
+}
+
+.mob {
+  display: none;
+}
+
+@media (max-width: 1200px) {
+  .container {
+    width: 100%;
+    margin: 0 10px;
+    max-width: calc(100% - 20px);
+  }
+  .mob {
+    display: block;
+  }
+  header nav {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: auto;
+    flex-direction: column;
+    border-radius: 5px;
+    padding: 10px;
+    align-items: center;
+    padding-bottom: 50px;
+    transform: translateX(-100%);
+    transition: all 0.4s ease;
+    z-index: 1;
+  }
+  header nav.active {
+    transform: translateX(0);
+  }
+  header .header-mob-button {
+    border-radius: 40px;
+    padding: 8px 16px;
+    width: 54px;
+    height: 36px;
+    background: #292929;
+    position: relative;
+    z-index: 2;
+  }
+  header .header-mob-button rect {
+    transition: all 0.4s ease;
+  }
+  header .header-mob-button rect:nth-child(2) {
+    transform-origin: left center;
+  }
+  header .header-mob-button.active svg rect {
+    transition: all 0.4s ease;
+  }
+  header .header-mob-button.active svg rect:nth-child(1) {
+    rotate: 45deg;
+    y: -3px;
+    x: 3px;
+  }
+  header .header-mob-button.active svg rect:nth-child(2) {
+    rotate: -45deg;
+    y: 15px;
+    x: -2px;
+    transform-origin: left center;
+  }
+  header .header-mob-button.active svg rect:nth-child(3) {
+    width: 0;
+  }
+  .hero .container {
+    flex-direction: column;
+    padding-bottom: 150px;
+    padding-top: 90px;
+  }
+  .hero .heading {
+    margin-bottom: 20px;
+  }
+  .hero .heading h1 {
+    font-size: 30px;
+  }
+  .hero .heading p {
+    font-size: 20px;
+  }
+  .hero .heading::after {
+    display: none;
+  }
+  .hero .more {
+    width: 100%;
+    max-width: 100%;
+    justify-content: center;
+  }
+  .hero .more.desk {
+    display: none;
+  }
+  .hero .l .text {
+    font-size: 16px;
+    line-height: 200%;
+  }
+  .hero .r .peoples {
+    border-bottom: 1px solid white;
+    padding-bottom: 20px;
+    margin-bottom: 20px;
+  }
+  .unic {
+    margin-top: 50px;
+    padding-bottom: 50px;
+  }
+  .unic .heading p {
+    font-size: 30px;
+    text-align: center;
+  }
+  .unic .heading svg {
+    display: none;
+  }
+  .unic .wrapper {
+    flex-direction: column;
+    align-items: center;
+  }
+  .uget .heading {
+    font-weight: 400;
+    font-size: 30px;
+  }
+  .uget .l {
+    position: relative;
+    z-index: 2;
+  }
+  .uget .l ul li {
+    font-size: 20px;
+    line-height: 250%;
+  }
+  .uget .l ul li::before {
+    margin-top: 20px;
+  }
+  .uget .l p {
+    font-family: "Ubuntu", sans-serif;
+    font-weight: 400;
+    font-size: 20px;
+    line-height: 160%;
+    color: #fff;
+  }
+  .uget .r {
+    position: absolute;
+    opacity: 0.5;
+    z-index: 1;
+    max-height: 100%;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+  }
+  .uget .r::before {
+    content: "";
+    display: block;
+    width: 100%;
+    height: 150px;
+    background: linear-gradient(360deg, #090909 0%, #090909 60%, rgba(9, 9, 9, 0) 100%);
+    position: absolute;
+    bottom: 0;
+    left: 0;
+  }
+  .uget .r::after {
+    content: "";
+    display: block;
+    width: 100%;
+    height: 150px;
+    background: linear-gradient(#090909 0%, #090909 60%, rgba(9, 9, 9, 0) 100%);
+    position: absolute;
+    top: 0;
+    left: 0;
+  }
+  .uget .bg {
+    display: none;
+  }
+  .steps .heaidng {
+    font-weight: 400;
+    font-size: 30px;
+  }
+  .steps .wrapper {
+    display: flex;
+    flex-direction: column;
+    gap: 110px;
+  }
+  .steps .wrapper .item svg {
+    transform: rotate(90deg) translateY(0) translateX(-50%);
+    top: calc(100% + 70px);
+    left: 40%;
+  }
+  .final .wrapper {
+    max-width: 100%;
+  }
+  .final .heading {
+    font-size: 30px;
+  }
+  .final .heading::after {
+    width: 100%;
+  }
+  .final .bg {
+    bottom: -100px;
+    width: 170%;
+    height: auto;
+    top: auto;
+  }
+  .final .text {
+    font-size: 20px;
+  }
+  .hero.btm .container {
+    padding-bottom: 200px;
+  }
+  .hero.btm .heading h2 {
+    font-size: 30px;
+  }
+  .hero.btm .heading h2::after {
+    display: block;
+    content: "";
+    width: 100%;
+    height: 1px;
+    background: white;
+    margin-top: 20px;
+    margin-bottom: 20px;
+  }
+  .hero.btm .more {
+    margin-top: 20px;
+  }
+  footer .container {
+    flex-direction: column;
+    align-items: center;
+    gap: 40px;
+  }
+  footer .container .item {
+    display: flex;
+    flex-direction: column;
+    gap: 40px;
+  }
+  footer .container .item a {
+    text-align: center;
+  }
 }/*# sourceMappingURL=style.css.map */

@@ -12,34 +12,41 @@
     
     <header>
         <div class="container">
+            <div class="mob header-mob-button">
+                <svg width="22" height="20" viewBox="0 0 22 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <rect width="22" height="4" rx="2" fill="white" />
+                    <rect y="8" width="22" height="4" rx="2" fill="white" />
+                    <rect y="16" width="22" height="4" rx="2" fill="white" />
+                </svg>
+            </div>
            <a href="#" class="logo"><img src="./media/icons/logo.svg" alt=""></a>
            <nav>
-                <div class="header-home">
+                <a href="#hero" class="header-home">
                     <svg width="21" height="20" viewBox="0 0 21 20" fill="none" xmlns="http://www.w3.org/2000/svg">
                     <path d="M2.4288 10.1699C2.4288 8.26291 2.4288 7.3094 2.86147 6.51895C3.29414 5.72851 4.08459 5.23793 5.6655 4.25677L7.33216 3.22239C9.00329 2.18524 9.83886 1.66667 10.7621 1.66667C11.6854 1.66667 12.521 2.18524 14.1921 3.22239L15.8588 4.25677C17.4397 5.23793 18.2301 5.72851 18.6628 6.51895C19.0955 7.3094 19.0955 8.26291 19.0955 10.1699V11.4375C19.0955 14.6882 19.0955 16.3136 18.1192 17.3235C17.1428 18.3333 15.5715 18.3333 12.4288 18.3333H9.09547C5.95277 18.3333 4.38142 18.3333 3.40511 17.3235C2.4288 16.3136 2.4288 14.6882 2.4288 11.4375V10.1699Z" stroke="white" stroke-width="1.5" />
                     <path d="M10.7621 12.5L10.7621 15" stroke="white" stroke-width="1.5" stroke-linecap="round" />
                     </svg>
-                </div>
+                </a>
                 <li>
-                    <a href="">Уникальность формата</a>
+                    <a href="#unic">Уникальность формата</a>
                 </li>
                 <li>
-                    <a href="">Что входит в обучение</a>
+                    <a href="#uget">Что входит в обучение</a>
                 </li>
                 <li>
-                    <a href="">Программа обучения</a>
+                    <a href="#steps">Программа обучения</a>
                 </li>
                 <li>
-                    <a href="">Финальное приключение</a>
+                    <a href="#final">Финальное приключение</a>
                 </li>
                 <li>
-                    <a href="">Blockchain</a>
+                    <a href="#btm">Blockchain</a>
                 </li>
            </nav>
         </div>
     </header>
     <main>
-        <section class="hero">
+        <section class="hero" id="hero">
             <div class="container">
                 <div class="l">
                     <div class="heading">
@@ -47,7 +54,7 @@
                         </h1>
                         <p>— лично с <span>Исмаилом</span></p>
                     </div>
-                    <button class="more">
+                    <button class="more desk">
                         Узнать подробности
                         <div class="arrow">
                             <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -77,6 +84,14 @@
                             </p>
                         </div>
                     </div>
+                    <button class="more mob">
+                        Узнать подробности
+                        <div class="arrow">
+                            <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M5 15L15 5M15 5H7.5M15 5V12.5" stroke="white" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
+                            </svg>
+                        </div>
+                    </button>
                 </div>
             </div>
 
@@ -232,7 +247,7 @@
                 </div>
             <img src="./media/img/bg/hero.png" alt="" class="bg">
         </section>
-        <section class="unic">
+        <section class="unic" id="unic">
             <div class="container">
                 <div class="heading">
                     <p>
@@ -290,7 +305,7 @@
                 </defs>
             </svg>
         </section>
-        <section class="uget">
+        <section class="uget" id="uget">
             <div class="container">
                 <div class="l">
                     <h3 class="heading">Что вы получаете в рамках <span>программы</span> </h3>
@@ -307,7 +322,7 @@
             </div>
             <img src="./media/img/bg/programm-bg.png" alt="" class="bg">
         </section>
-        <section class="steps">
+        <section class="steps" id="steps">
             <div class="container">
                 <h3 class="heaidng">Программа <br> <span>6-дневного</span> обучения</h3>
                 <div class="wrapper">
@@ -363,7 +378,7 @@
             </div>
             <img src="./media/img/bg/steps.png" alt="" class="block-bg">
         </section>
-        <section class="final">
+        <section class="final" id="final">
             <div class="container">
                 <div class="wrapper">
                     <h3 class="heading">Незабываемый финал <span>обучения</span></h3>
@@ -376,14 +391,14 @@
             </div>
             <img src="./media/img/bg/final.png" alt="" class="bg">
         </section>
-        <section class="hero btm">
+        <section class="hero btm" id="btm">
             <div class="container">
                 <div class="l">
                     <div class="heading">
                         <h2 class="headingh"> <span>Blockchain </span> Life Conference
                         </h2>
                     </div>
-                    <button class="more">
+                    <button class="desk more">
                        Узнать стоимость обучения 
                         <div class="arrow">
                             <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -407,6 +422,14 @@
                         <span>Для того чтобы узнать стоимость данного обучения, напиши в директ инстаграмма Исмаилу или нажмите по кнопке справа.</span>
 
                     </p>
+                    <button class="mob more">
+                       Узнать стоимость обучения 
+                        <div class="arrow">
+                            <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M5 15L15 5M15 5H7.5M15 5V12.5" stroke="white" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
+                            </svg>
+                        </div>
+                    </button>
                 </div>
             </div>
 
@@ -565,19 +588,19 @@
     </main>
     <footer>
         <div class="container">
-            <a href="" class="logo">
+            <a href="#hero" class="logo">
                 <img src="./media/icons/logo.svg" alt="">
             </a>
             <div class="item">
-                <a href="">Уникальность формата</a>
-                <a href="">Что входит в обучение</a>
+                <a href="#unic">Уникальность формата</a>
+                <a href="#uget">Что входит в обучение</a>
             </div>
             <div class="item">
-                <a href="">Программа обучения</a>
-                <a href="">Финальное приключение</a>
+                <a href="#steps">Программа обучения</a>
+                <a href="#final">Финальное приключение</a>
             </div>
             <div class="item">
-                <a href="">Blockchain</a>
+                <a href="#btm">Blockchain</a>
             </div>
             <div class="button">
                 <a href="">
